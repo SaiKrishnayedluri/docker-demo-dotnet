@@ -24,7 +24,7 @@ jobs:
     - name: Scan Docker Image for vulnerabilities
       uses: aquasecurity/trivy-action@0.28.0
       with:
-        image-ref: ${{ secrets.DOCKER_USERNAME }}/dotnet-demo:${{ github.run_id }}
+        image-ref: ${{ secrets.DOCKER_USERNAME }}/dotnet-demo1:${{ github.run_id }}
         format: 'sarif'
         output: 'trivy-results.sarif'
 
