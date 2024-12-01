@@ -25,8 +25,8 @@ jobs:
       uses: aquasecurity/trivy-action@0.28.0
       with:
         image-ref: ${{ secrets.DOCKER_USERNAME }}/dotnet-demo:${{ github.run_id }}
-        format: 'table'
-        output: 'trivy-results.table'
+        format: 'sarif'
+        output: 'trivy-results.sarif'
         
     - name: Upload Trivy scan results to GitHub Security tab
       uses: github/codeql-action/upload-sarif@v3
